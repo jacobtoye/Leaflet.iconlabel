@@ -93,11 +93,11 @@ L.Icon.Label.Default = L.Icon.Label.extend({
 		labelText: null,
 		
 		/* From L.Icon.Default */
-		iconUrl: L.ROOT_URL + 'images/marker.png',
+		iconUrl: L.Icon.Default.imagePath + '/marker-icon.png',
 		iconSize: new L.Point(25, 41),
 		popupAnchor: new L.Point(0, -33),
 
-		shadowUrl: L.ROOT_URL + 'images/marker-shadow.png',
+		shadowUrl: L.Icon.Default.imagePath + '/marker-shadow.png',
 		shadowSize: new L.Point(41, 41)
 	}
 });
