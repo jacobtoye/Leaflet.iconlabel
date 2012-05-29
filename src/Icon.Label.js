@@ -23,14 +23,14 @@ L.Icon.Label = L.Icon.extend({
 	},
 
 	createIcon: function () {
-		return this._createLabel(L.Icon.prototype._createIcon.call(this, 'icon'));
+		return this._createLabel(L.Icon.prototype.createIcon.call(this));
 	},
 	
 	createShadow: function () {
 		if (!this.options.shadowUrl) {
 			return null;
 		}
-		var shadow = L.Icon.prototype._createIcon.call(this, 'shadow');
+		var shadow = L.Icon.prototype.createShadow.call(this);
 		//need to reposition the shadow
 		if (shadow) {
 			shadow.style.marginLeft = (-this.options.wrapperAnchor.x) + 'px';
