@@ -11,7 +11,7 @@ var marker = new L.Marker(
 );
 ````
 
-For a more complete example see [example/map-marker-iconlabels.html](https://github.com/jacobtoye/Leaflet.iconlabel/tree/master/examples/map-marker-iconlabels.html)
+For a more complete example see [example/map-marker-iconlabels.html](https://github.com/jacobtoye/Leaflet.iconlabel/blob/master/example/map-marker-iconlabels.html)
 
 ###Using different icons
 See ````L.Icon.Label.Default```` for comments on the positioning of the icon and label. If you wish to use a different sized icon or label you need to edit some of the options. 
@@ -32,4 +32,4 @@ var SweetIcon = L.Icon.Label.extend({
 });
 ````
 
-See [example/map-marker-iconlabels-custom.html](https://github.com/jacobtoye/Leaflet.iconlabel/tree/master/examples/map-marker-iconlabels-custom.html) for complete example.
+See [example/map-marker-iconlabels-custom.html](https://github.com/jacobtoye/Leaflet.iconlabel/blob/master/example/map-marker-iconlabels-custom.html) for complete example.
