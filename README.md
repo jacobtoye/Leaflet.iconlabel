@@ -1,8 +1,8 @@
 #Leaflet.iconlabel
-Adds support for displaying a label to the right of a Leaflet L.Icon.
+Adds support for displaying a label to the right of a Leaflet Icon.
 
 ##Using the plugin
-If you are happy with the default style you should be able to use it straight off the bat. To create a map marker with a label, declare your marker like:
+If you are happy with the default icon and label styles, you should be able to use it without any modifications. To create a map marker with a label, declare your marker like:
 
 ````
 var marker = new L.Marker(
