@@ -59,7 +59,7 @@ L.Icon.Label = L.Icon.extend({
 		wrapper.style.marginLeft = (-this.options.wrapperAnchor.x) + 'px';
 		wrapper.style.marginTop = (-this.options.wrapperAnchor.y) + 'px';
 
-		wrapper.className = 'leaflet-marker-icon-wrapper';
+		wrapper.className = 'leaflet-marker-icon-wrapper leaflet-zoom-animated';
 		
 		//reset icons margins (as super makes them -ve)
 		img.style.marginLeft = this.options.iconAnchor.x + 'px';
