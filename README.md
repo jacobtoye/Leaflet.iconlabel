@@ -33,3 +33,15 @@ var SweetIcon = L.Icon.Label.extend({
 ````
 
 See [example/map-marker-iconlabels-custom.html](https://github.com/jacobtoye/Leaflet.iconlabel/blob/master/example/map-marker-iconlabels-custom.html) for complete example.
+
+###Revealing labels
+If you would like the labels to initially be hidden and only show on mouseover of the icon, use the L.Marker.Label and set the revealing = true in the marker options.
+
+E.g.
+
+````
+var aMarker = new L.Marker.Label(
+	[-37.7866, 175.2789],
+	{ icon: new L.Icon.Label.Default({ labelText: "A label" }), revealing: true }
+);
+````
