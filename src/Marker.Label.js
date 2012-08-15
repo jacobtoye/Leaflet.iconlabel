@@ -1,5 +1,9 @@
 L.Marker.Label = L.Marker.extend({
 	_initIcon: function () {
+		if (!(this.options.icon instanceof L.Icon.Label)) {
+			throw new Error('Icon must be an instance of L.Icon.Label.');
+		}
+
 		// Ensure that the label is hidden to begin with
 		if (this.options.revealing) {
 			this.options.icon.setLabelAsHidden();
