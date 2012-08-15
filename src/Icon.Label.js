@@ -22,6 +22,10 @@ L.Icon.Label = L.Icon.extend({
 		L.Icon.prototype.initialize.call(this, this.options);
 	},
 
+	setLabelAsHidden: function () {
+		this._labelHidden = true;
+	},
+
 	createIcon: function () {
 		return this._createLabel(L.Icon.prototype.createIcon.call(this));
 	},
@@ -39,6 +43,22 @@ L.Icon.Label = L.Icon.extend({
 		return shadow;
 	},
 
+	showLabel: function (icon) {
+		if (!this.options.labelText) {
+			return;
+		}
+
+		icon.childNodes[1].style.display = 'block';
+	},
+
+	hideLabel: function (icon) {
+		if (!this.options.labelText) {
+			return;
+		}
+
+		icon.childNodes[1].style.display = 'none';
+	},
+
 	_createLabel: function (img) {
 		if (!this.options.labelText) {
 			return img;
@@ -54,6 +74,10 @@ L.Icon.Label = L.Icon.extend({
 		//set up label's styles
 		label.style.marginLeft = this.options.labelAnchor.x + 'px';
 		label.style.marginTop = this.options.labelAnchor.y + 'px';
+
+		if (this._labelHidden) {
+			label.style.display = 'none';
+		}
 		
 		//set up wrapper anchor
 		wrapper.style.marginLeft = (-this.options.wrapperAnchor.x) + 'px';
