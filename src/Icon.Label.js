@@ -67,23 +67,23 @@ L.Icon.Label = L.Icon.extend({
 		var wrapper = document.createElement('div'),
 			label = document.createElement('span');
 
+		// set up wrapper anchor
+		wrapper.style.marginLeft = (-this.options.wrapperAnchor.x) + 'px';
+		wrapper.style.marginTop = (-this.options.wrapperAnchor.y) + 'px';
+
+		wrapper.className = 'leaflet-marker-icon-wrapper leaflet-zoom-animated';
+
+		// set up label
 		label.className = 'leaflet-marker-iconlabel ' + this.options.labelClassName;
 
 		label.innerHTML = this.options.labelText;
 
-		//set up label's styles
 		label.style.marginLeft = this.options.labelAnchor.x + 'px';
 		label.style.marginTop = this.options.labelAnchor.y + 'px';
 
 		if (this._labelHidden) {
 			label.style.display = 'none';
 		}
-		
-		//set up wrapper anchor
-		wrapper.style.marginLeft = (-this.options.wrapperAnchor.x) + 'px';
-		wrapper.style.marginTop = (-this.options.wrapperAnchor.y) + 'px';
-
-		wrapper.className = 'leaflet-marker-icon-wrapper leaflet-zoom-animated';
 		
 		//reset icons margins (as super makes them -ve)
 		img.style.marginLeft = this.options.iconAnchor.x + 'px';
