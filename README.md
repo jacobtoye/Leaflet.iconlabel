@@ -45,3 +45,42 @@ var aMarker = new L.Marker.Label(
 	{ icon: new L.Icon.Label.Default({ labelText: "A label" }), revealing: true }
 );
 ````
+
+###How to position
+Positioning the iconlabel is a little tricky. You need to specify three anchors: the ````wrapperAnchor````, the ````iconAnchor```` and the ````labelAnchor````. These options will determine how the iconlabel ispositioned relative to the lat/lng.
+
+**wrapperAnchor**
+This is the position of the wrapper div. Use this to position icon + label relative to the Lat/Lng.
+
+**iconAnchor**
+This is now the top left position of the icon within the wrapper.
+
+````x = 0```` Icon is to be displayed before the label.
+````y = (label height - icon height) / 2```` When the icon height < label height.
+````y = 0```` When icon height > label height.
+
+**labelAnchor**
+This is the top left position of the label within the wrapper.
+
+````x = icon width + padding between icon and label```` Label is displayed to right of icon.
+````y = 0```` When label height > icon height.
+````y = (icon height - label height) / 2```` When label height > icon height.
+
+**E.g. Icon height > label height**
+
+<img src="https://raw.github.com/jacobtoye/Leaflet.iconlabel/master/eg1.png" alt="E.g. 1" />
+
+Height or icon: 41
+Width of icon: 25
+Left position of icon point: 13
+Padding: 4
+Height of label: 26
+
+We want to label to be anchored by the point of the icon.
+````wrapperAnchor = new L.Point(13, 41)````
+
+The icon height is greater than the label height.
+````iconAnchor = new L.Point(0, 0)````
+
+The label height is less than the icon height.
+````iconAnchor = new L.Point(25 + 4, Math.ceil((41-26)/2))```` or ````iconAnchor = new L.Point(29, 8)````
