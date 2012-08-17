@@ -83,6 +83,8 @@ L.Icon.Label = L.Icon.extend({
 
 		if (this._labelHidden) {
 			label.style.display = 'none';
+			// Ensure that the pointer cursor shows
+			img.style.cursor = 'pointer';
 		}
 		
 		//reset icons margins (as super makes them -ve)
