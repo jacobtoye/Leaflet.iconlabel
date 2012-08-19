@@ -13,15 +13,13 @@ L.Marker.Label = L.Marker.extend({
 	},
 
 	_removeIcon: function () {
-		L.Marker.prototype._removeIcon.call(this);
-
-		if (!this.options.revealing) {
-			return;
-		}
-
-		L.DomEvent
+		if (this.options.revealing) {
+			L.DomEvent
 			.off(this._icon, 'mouseover', this._showLabel)
 			.off(this._icon, 'mouseout', this._hideLabel);
+		}
+
+		L.Marker.prototype._removeIcon.call(this);
 	},
 
 	_initInteraction: function () {
