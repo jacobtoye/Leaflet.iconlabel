@@ -61,6 +61,9 @@ L.Icon.Label = L.Icon.extend({
 
 	_createLabel: function (img) {
 		if (!this.options.labelText) {
+			var pos = this.options.iconSize.divideBy(2);
+			img.style.marginLeft = (-pos.x) + 'px';
+			img.style.marginTop = (-pos.y) + 'px';
 			return img;
 		}
 
