@@ -44,7 +44,7 @@ L.Icon.Label = L.Icon.extend({
 	},
 
 	showLabel: function (icon) {
-		if (!this.options.labelText) {
+		if (!this._labelTextIsSet()) {
 			return;
 		}
 
@@ -52,7 +52,7 @@ L.Icon.Label = L.Icon.extend({
 	},
 
 	hideLabel: function (icon) {
-		if (!this.options.labelText) {
+		if (!this._labelTextIsSet()) {
 			return;
 		}
 
@@ -60,7 +60,7 @@ L.Icon.Label = L.Icon.extend({
 	},
 
 	_createLabel: function (img) {
-		if (!this.options.labelText) {
+		if (!this._labelTextIsSet()) {
 			return img;
 		}
 
@@ -95,5 +95,9 @@ L.Icon.Label = L.Icon.extend({
 		wrapper.appendChild(label);
 
 		return wrapper;
+	},
+	
+	_labelTextIsSet: function () {
+		return typeof this.options.labelText !== 'undefined' && this.options.labelText !== null;
 	}
 });
