@@ -1,6 +1,9 @@
 #Leaflet.iconlabel
 Adds support for displaying a label to the right of a Leaflet Icon.
 
+##Alternative plugin
+[Leaflet.label](https://github.com/jacobtoye/Leaflet.label) is an alternative plugin that is a little easier to integrate. The only functionality that it does not provide is common events for the label and marker. However it does provide revealing labels for Leaflet paths (Polyline, Polygon, Circle, square etc). 
+
 ##Using the plugin
 If you are happy with the default icon and label styles, you should be able to use it without any modifications. To create a map marker with a label, declare your marker like:
 
