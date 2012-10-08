@@ -43,6 +43,14 @@ L.Icon.Label = L.Icon.extend({
 		return shadow;
 	},
 
+	updateLabel: function (icon, text) {
+		if (icon.nodeName.toUpperCase() === 'DIV') {
+			icon.childNodes[1].innerHTML = text;
+			
+			this.options.labelText = text;
+		}
+	},
+
 	showLabel: function (icon) {
 		if (!this._labelTextIsSet()) {
 			return;
@@ -133,6 +141,10 @@ L.Icon.Label.Default = L.Icon.Label.extend({
 });
 
 L.Marker.Label = L.Marker.extend({
+	updateLabel: function (text) {
+		this.options.icon.updateLabel(this._icon, text);
+	},
+
 	_initIcon: function () {
 		if (!(this.options.icon instanceof L.Icon.Label)) {
 			throw new Error('Icon must be an instance of L.Icon.Label.');
@@ -149,8 +161,8 @@ L.Marker.Label = L.Marker.extend({
 	_removeIcon: function () {
 		if (this.options.revealing) {
 			L.DomEvent
-			.off(this._icon, 'mouseover', this._showLabel)
-			.off(this._icon, 'mouseout', this._hideLabel);
+				.off(this._icon, 'mouseover', this._showLabel)
+				.off(this._icon, 'mouseout', this._hideLabel);
 		}
 
 		L.Marker.prototype._removeIcon.call(this);
