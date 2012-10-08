@@ -43,6 +43,14 @@ L.Icon.Label = L.Icon.extend({
 		return shadow;
 	},
 
+	updateLabel: function (icon, text) {
+		if (icon.nodeName.toUpperCase() === 'DIV') {
+			icon.childNodes[1].innerHTML = text;
+			
+			this.options.labelText = text;
+		}
+	},
+
 	showLabel: function (icon) {
 		if (!this._labelTextIsSet()) {
 			return;
