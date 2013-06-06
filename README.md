@@ -50,7 +50,7 @@ var aMarker = new L.Marker.Label(
 ````
 
 ###How to position
-Positioning the iconlabel is a little tricky. You need to specify three anchors: the ````wrapperAnchor````, the ````iconAnchor```` and the ````labelAnchor````. These options will determine how the iconlabel ispositioned relative to the lat/lng.
+Positioning the iconlabel is a little tricky. You need to specify three anchors: the ````wrapperAnchor````, the ````iconAnchor```` and the ````labelAnchor````. These options will determine how the iconlabel is positioned relative to the lat/lng.
 
 #####wrapperAnchor
 This is the position of the wrapper div. Use this to position icon + label relative to the Lat/Lng.
