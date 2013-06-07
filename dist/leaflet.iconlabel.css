@@ -1,10 +1,6 @@
-.leaflet-marker-icon-wrapper {
-	position: absolute
-}
-
 .leaflet-marker-iconlabel {
 	background: #fff;
-	-moz-border-radius: 7px; 
+	-moz-border-radius: 7px;
 	-webkit-border-radius: 7px;
 	border-radius: 7px;
 	-moz-box-shadow: 0 3px 10px #888;
