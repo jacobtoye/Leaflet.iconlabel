@@ -79,6 +79,7 @@ L.Icon.Label = L.Icon.extend({
 		wrapper.style.marginLeft = (-this.options.wrapperAnchor.x) + 'px';
 		wrapper.style.marginTop = (-this.options.wrapperAnchor.y) + 'px';
 
+		wrapper.style.position = 'absolute';
 		wrapper.className = 'leaflet-marker-icon-wrapper leaflet-zoom-animated';
 
 		// set up label
