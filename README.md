@@ -1,10 +1,10 @@
-#Leaflet.iconlabel
+# Leaflet.iconlabel
 Adds support for displaying a label to the right of a Leaflet Icon.
 
-##Alternative plugin
+## Alternative plugin
 [Leaflet.label](https://github.com/leaflet/Leaflet.label) is an alternative plugin that is a little easier to integrate. The only functionality that it does not provide is common events for the label and marker. However it does provide revealing labels for Leaflet paths (Polyline, Polygon, Circle, square etc). 
 
-##Using the plugin
+## Using the plugin
 If you are happy with the default icon and label styles, you should be able to use it without any modifications. To create a map marker with a label, declare your marker like:
 
 ````
@@ -16,7 +16,7 @@ var marker = new L.Marker(
 
 For a more complete example see [example/map-marker-iconlabels.html](https://github.com/jacobtoye/Leaflet.iconlabel/blob/master/example/map-marker-iconlabels.html)
 
-###Using different icons
+### Using different icons
 See ````L.Icon.Label.Default```` for comments on the positioning of the icon and label. If you wish to use a different sized icon or label you need to edit some of the options. 
 
 E.g. Custom icon (24x24)
@@ -37,7 +37,7 @@ var SweetIcon = L.Icon.Label.extend({
 
 See [example/map-marker-iconlabels-custom.html](https://github.com/jacobtoye/Leaflet.iconlabel/blob/master/example/map-marker-iconlabels-custom.html) for complete example.
 
-###Revealing labels
+### Revealing labels
 If you would like the labels to initially be hidden and only show on mouseover of the icon, use the L.Marker.Label and set the revealing = true in the marker options.
 
 E.g.
@@ -49,13 +49,13 @@ var aMarker = new L.Marker.Label(
 );
 ````
 
-###How to position
+### How to position
 Positioning the iconlabel is a little tricky. You need to specify three anchors: the ````wrapperAnchor````, the ````iconAnchor```` and the ````labelAnchor````. These options will determine how the iconlabel is positioned relative to the lat/lng.
 
-#####wrapperAnchor
+##### wrapperAnchor
 This is the position of the wrapper div. Use this to position icon + label relative to the Lat/Lng.
 
-#####iconAnchor
+##### iconAnchor
 This is now the top left position of the icon within the wrapper.
 
 ````x = 0```` Icon is to be displayed before the label.<br />
@@ -69,7 +69,7 @@ This is the top left position of the label within the wrapper.
 ````y = 0```` When label height > icon height.<br />
 ````y = (icon height - label height) / 2```` When label height > icon height.
 
-####E.g. Icon height > label height
+#### E.g. Icon height > label height
 
 <img src="https://raw.github.com/jacobtoye/Leaflet.iconlabel/master/eg1.png" alt="E.g. 1" />
 
